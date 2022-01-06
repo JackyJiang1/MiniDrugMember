@@ -1,0 +1,91 @@
+<!--pages/drugmember/memberinfo/memberinfo.wxml-->
+<view class="page">
+ <!--页头-->
+    <view class="userinfo">
+        <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/road_bg.jpg' style="height:400rpx;width:100%;" />
+        <block wx:if="{{canIUseOpenData}}">
+            <view class="userinfo-avatar" bindtap="bindViewTap">
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+            <!-- <open-data type="userNickName"></open-data> -->
+        </block>
+    </view>
+
+    <!--用户信息区域-->
+    <view class="form">
+        <view class="memberinfo">        
+            <form bindsubmit="formSubmit">
+                <view class="info-cell">
+                    <view style="width:30%">
+                        <view class="info-label">昵称</view>
+                    </view>
+                    <view>
+                        <open-data class="info-input" type="userNickName"></open-data>
+                    </view>
+                </view>
+                <view class="info-cell">
+                    <view style="width:30%">
+                        <view class="info-label">手机号</view>
+                    </view>
+                    <view>
+                        <input class="info-input" type="number" maxlength="11" name="phone" placeholder="请输入手机号" value="{{userInfo.phone}}" />
+                    </view>
+                </view>
+                <view class="info-cell">
+                    <view style="width:30%">
+                        <view class="info-label">性别</view>
+                    </view>
+                    <view>
+                        <view class="info-input">
+                            <radio-group class="radio-group" name="group_sex" bindchange='radioChange' id="rdoSex">
+                                <label class="radio" bindchange="radioChange">
+                                    <radio value="1" />男
+                                </label>
+                                <label class="radio" bindchange="radioChange" style="margin-left: 40rpx;">
+                                    <radio value="0" />女
+                                </label>
+                            </radio-group>
+                        </view>
+                    </view>
+                </view>
+                <view class="info-cell">
+                    <view style="width:30%">
+                        <view class="info-label">所在城市</view>
+                    </view>
+                    <view>
+                        <input class="info-input" name="city" placeholder="请选择城市" value="" />
+                    </view>
+                </view>
+                <view class="info-cell">
+                    <view style="width:30%">
+                        <view class="info-label">所属门店</view>
+                    </view>
+                    <view>
+                        <input class="info-input" name="shop" placeholder="请选择门店" value="" />
+                    </view>
+                </view>
+                <view class="info-btn-area">
+                    <button class="info-btn" type="primary" formType="submit" >保 存</button>
+                </view>
+            </form>
+        </view>
+    </view>
+
+<!-- <view wx:if="{{condition}}" class="citypicker">
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;background:#fff" value="{{value}}" bindchange="bindChange" class="citybody">
+        <view class="cityheader">
+        <view bindtap="open" class="city-cancel">取消</view>
+        <view bindtap="open" class="city-true">确定</view>
+        </view>
+        <picker-view-column>
+        <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+        <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+        <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+    </picker-view>
+</view> -->
+</view>

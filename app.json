@@ -1,0 +1,47 @@
+{
+    "pages": [
+        "pages/drugmember/index/index",
+        "pages/drugmember/mine/mine",
+        "pages/drugmember/question/question",
+        "pages/drugmember/scoremall/scoremall",
+        "pages/drugmember/memberinfo/memberinfo",
+        "pages/drugmember/myscore/myscore",
+        "pages/drugmember/speak/speak",
+        "pages/drugmember/speakindex/speakindex"
+    ],
+    "tabBar": {
+        "color": "#858585",
+        "selectedColor": "#008842",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/drugmember/index/index",
+                "iconPath": "images/icons/home_icon.png",
+                "selectedIconPath": "images/icons/home_active_icon.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/drugmember/scoremall/scoremall",
+                "iconPath": "images/icons/score_icon.png",
+                "selectedIconPath": "images/icons/score_active_icon.png",
+                "text": "玩转积分"
+            },
+            {
+                "pagePath": "pages/drugmember/mine/mine",
+                "iconPath": "images/icons/my_icon.png",
+                "selectedIconPath": "images/icons/my_active_icon.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#5CC583",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "debug": true,
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

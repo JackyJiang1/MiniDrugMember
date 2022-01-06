@@ -1,0 +1,70 @@
+/* pages/drugmember/speakindex/speakindex.wxss */
+page{
+    background-color: #F0F4F7;
+}
+
+.list-tab{
+    height: 72rpx;
+    box-sizing: border-box;
+    /* padding: 5px 10px; */
+    width: 95%;
+    margin: 40rpx auto;
+  }
+  .list-tab ul{
+    display: flex;
+    height: 72rpx;
+    border: 1rpx solid #1D8EDE;
+    border-radius: 12rpx;
+  }
+  .list-tab li{
+    flex: 1;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    color:#1D8EDE;
+  }
+  .list-tab .active{
+    background: #1D8EDE;
+    color: #ffffff;
+  }
+  
+.speak-detail-con{
+}
+
+.speak-detail-list{
+    padding-bottom: 50rpx;
+}
+.speak-detail-item{
+    margin: 30rpx auto 0;
+    width: 90%;
+    background-color: #FFF;
+    border-radius: 20rpx;
+    padding: 30rpx 0;
+}
+.speak-detail-item .title{
+    color: #3E3E3E; 
+    font-size: 34rpx; 
+    margin: 15rpx 0 0 40rpx;
+}
+.speak-detail-item .totalspeak{
+    color: #108016; 
+    font-size: 25rpx;
+    float:right; 
+    margin-right:40rpx;
+}
+.speak-detail-item .date{
+    color: #949494; 
+    font-size: 30rpx; 
+    margin: 15rpx 0 0 40rpx; 
+}
+.speak-detail-item .gospeak{
+    display: inline-block;
+    background-color: #1D8EDE;
+    margin-right: 40rpx;
+    font-size: 25rpx;
+    float: right;
+    color: #FFF; 
+    padding: 10rpx 30rpx; 
+    border-radius: 10rpx;
+}

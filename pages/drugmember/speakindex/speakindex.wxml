@@ -1,0 +1,26 @@
+<!--pages/drugmember/speakindex/speakindex.wxml-->
+<view class="page">
+    <view class='list-tab'>
+        <ul>
+            <li class="{{current == 0 ? 'active' : ''}}" catchtap='switchSlider' data-index='0'>最新发布</li>
+            <li class="{{current == 1 ? 'active' : ''}}" catchtap='switchSlider' data-index='1'>说的最多</li>
+            <li class="{{current == 2 ? 'active' : ''}}" catchtap='switchSlider' data-index='2'>我未说的</li>
+        </ul>
+    </view>
+
+    <!--开口说列表-->
+    <view class='speak-detail-list'>
+        <view class="speak-detail-item" wx:for="{{list}}" wx:key="id" wx:for-index="ind">
+            <view class="title">       
+                {{item.title}}
+                <text class="totalspeak">{{item.totalspeak}}人已说</text>
+            </view>
+            <view class="date">
+                {{item.createddate}}
+                <!--我要说按钮-->
+                <span id='span{{item.id}}' class='gospeak' data-id='{{item.id}}' bindtap='WantGoToSpeak'>我要说</span>
+            </view>
+        </view>
+    </view>
+</view>
+

@@ -1,0 +1,32 @@
+<!--pages/drugmember/speak/speak.wxml-->
+<view class="page">
+    <!--页头，显示需要用户读的文字-->
+    <view class="speak-head">
+        <view class="title">
+            青霉素的功效与作用
+        </view>
+        <view class="date">
+            <span>
+              2021-12-29
+            </span>
+        </view>
+        <view class="text">
+            青霉素是从青霉菌的培养液中提取出来的，是一种天然抗生素，属于β-内酰胺类抗生素。青霉素的主要作用就是杀灭细菌，通过阻碍细菌细胞壁的合成，导致细菌膨胀、破裂、自溶而杀死细菌。青霉素还可以抗螺旋体，青霉素对病毒、真菌、立克次体、原虫等病原体没有作用。临床上，青霉素主要用来治疗敏感细菌以及螺旋体导致的感染，如咽炎、扁桃体炎、大叶性肺炎、支气管肺炎、脓胸、感染性心内膜炎、猩红热、疖、痈、丹毒、蜂窝织炎，还有淋病、流脑、白喉、破伤风以及某些败血症等细菌感染。青霉素还用来治疗螺旋体病，如梅毒、回归热、钩端螺旋体病。
+        </view>
+    </view>
+
+
+    <view class="bottom">
+      <view class="speak-btn">
+        <progress strokeWidth="4" percent="{{value}}" wx:if="{{showPg}}" ></progress>
+        <view class="dot {{isTouchStart==true?'dot-blowup':''}} {{isTouchEnd==true?'dot-zoomout':''}}" style="display:{{isDot}}"></view>
+        <view class="record" bindtouchstart="recordStart" bindtouchend="recordTerm">
+          <image mode="widthFix" src="cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/icons/microphone_icon.png" style="width:120rpx;height:120rpx"></image>
+        </view>
+      </view>
+    </view>
+
+</view>
+
+
+

@@ -1,0 +1,264 @@
+/* pages/drugmember/index/index.wxss */
+/* page {
+  background-color: #000;
+}  */
+/* 默认指示点的样式 */
+.swiper .wx-swiper-dot {
+  width: 15rpx;
+  height: 15rpx;
+  background: white;
+  border-radius: 15rpx;
+}
+ 
+/* 选中指示点的样式 */
+.swiper .wx-swiper-dot.wx-swiper-dot-active {
+    width: 30rpx;
+    height: 15rpx;
+    background: white;
+    border-radius: 15rpx;
+}
+
+
+.weui-search-bar {
+    padding: 5px 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    margin: auto;
+    width: 100%;
+    /* background-color: #EFEFF4; */
+    /* border-top: 1rpx solid #D7D6DC;
+    border-bottom: 1rpx solid #D7D6DC; */
+  }
+  .weui-icon-search_in-box {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+  }
+  .weui-search-bar__form {
+    /* position: relative;*/
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+    flex: auto; 
+    height:25px;
+    border-radius: 20px;
+    background-color: #FFF;
+    border: 1rpx solid #E6E6EA;
+    filter: alpha(opacity=70); /*IE滤镜，透明度50%*/
+    -moz-opacity: 0.7; /*Firefox私有，透明度50%*/
+    opacity: 0.7; /*其他，透明度50%*/
+
+}
+  .weui-search-bar__box {
+    position: relative;
+    padding-left: 30px;
+    /* padding-right: 50px; */
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .weui-search-bar__input {
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+  }
+  .weui-search-bar__cancel-btn {
+    background-color: #09BB07;
+    font-size:14px;
+    margin-left: 10px;
+    line-height: 25px;
+    height: 25px;
+    color: #FFF;
+    white-space: nowrap;
+    border: 1px solid #09BB07;
+    border-radius: 5px;
+    padding: 0 15px;
+    filter: alpha(opacity=80); /*IE滤镜，透明度50%*/
+    -moz-opacity: 0.8; /*Firefox私有，透明度50%*/
+    opacity: 0.8; /*其他，透明度50%*/
+  }
+  .list-tab{
+    height: 226rpx;
+    box-sizing: border-box;
+    /* padding: 5px 10px; */
+    position: relative;
+  }
+  .list-tab .ul-icons{
+    display: flex;
+    height: 226rpx;
+    /* border: 1px solid #008842; */
+    border:1px solid #FFF;
+    background-color: #FFF;
+    box-shadow: 3px 5px 2px #F2F2F2;
+    border-left : 1px solid #F2F2F2;
+    border-radius: 12rpx;
+    position: absolute;
+    top: -8px;
+    left: 4%;
+    z-index: 100;
+    width: 92%;
+  }
+  .list-tab .ul-icons li{
+    flex: 1;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    color:#008842;
+    margin-top: -10px;
+  }  
+  .icon_bg1{
+    background-image: linear-gradient(to top left,#5BB883 , #78DEB2);/* 自右下向左上渐变 */
+    border-radius: 20px;
+    padding: 5px 8px;
+  }
+  .icon_bg2{
+    background-image: linear-gradient(to top left,#FFA014 , #FFC114);/* 自右下向左上渐变 */
+    border-radius: 20px;
+    padding: 5px 8px;
+  }
+  .icon_bg3{
+    background-image: linear-gradient(to top left,#3E88E1 , #7FB1FE);/* 自右下向左上渐变 */
+    border-radius: 20px;
+    padding: 5px 8px;
+  }
+  .icon_bg4{
+    background-image: linear-gradient(to top left,#1DB9A5 , #73DCD2);/* 自右下向左上渐变 */
+    border-radius: 20px;
+    padding: 5px 8px;
+  }
+
+  .list-tab .ul-text{
+    display: flex;
+    height: 26rpx;
+    position: absolute;
+    bottom: 15px;
+    left: 4%;
+    z-index: 100;
+    width: 92%;
+  }
+  .list-tab .ul-text li{
+    flex: 1;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+  }  
+
+  .yao-tab{
+    height: 192rpx;
+    box-sizing: border-box;
+    margin-top: 50rpx;
+    /* padding: 5px 10px; */
+  }
+  .yao-tab ul{
+     display: flex;
+    height: 192rpx; 
+    width: 92%;
+    margin: 0 auto;
+  }
+  .yao-tab ul li{
+    flex: 1;
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 5px;
+ }
+ .yaobg{
+    border: 0 none;
+    position: relative;
+    /* border-radius: 5px; */
+    /* border-left: 1px solid #FFF;
+    border-right: 1px solid #FFF; */
+    overflow: hidden;
+    width:100%;
+ }
+
+ .yaobg image{
+    border-radius: 8px;
+    /* border: 1px solid #FFF; */
+    display: block;
+ }
+
+ .zuixinzixun{
+  width: 92%;
+  margin: 40rpx 4% 20rpx; 
+ }
+
+ .zuixinzixun .title{
+  color:#292928;
+  font-size: 16px; 
+  font-weight: bold; 
+ }
+ 
+ 
+ /* pages/list/list.wxss */
+.page-header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1rpx solid #ccc;
+}
+.page-title {
+  padding: 20rpx 40rpx;
+  color: #999;
+  font-size: 38rpx;
+  text-align: center;
+}
+.page-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.item {
+  display: flex;
+  padding: 20rpx 40rpx;
+  border-bottom: 1rpx solid #eee;
+  cursor: pointer;
+}
+.item .poster {
+  width: 128rpx;
+  height: 128rpx;
+  margin-right: 20rpx;
+}
+.item .meta {
+  flex: 1;
+}
+.item .meta .title,.item .meta .sub-title {
+  display: block;
+  margin-bottom: 15rpx;
+}
+.item .meta .title {
+  font-size: 32rpx;
+}
+.item .meta .sub-title {
+  font-size: 22rpx;
+  color: #c0c0c0;
+}
+.item .meta .artists {
+  font-size: 26rpx;
+  color: #999;
+}
+.item .rating {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #f74c31;
+}
+.tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 50rpx;
+  color: #ccc;
+}
+.tips image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.tips image,.tips text {
+  vertical-align: middle;
+}

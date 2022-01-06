@@ -1,0 +1,51 @@
+<!--pages/drugmember/myscore/myscore.wxml-->
+<view class="page">
+    <!--页头-->
+    <view class="myscorehead">
+        <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/my_score_bg.png' style="height:400rpx;width:100%;" />
+        <view class="title">
+            我的积分
+        </view>
+    </view>
+
+    <!--积分总计-->
+    <view class="total-score-con">
+        <view class="total-score">
+            <view style="text-align: center; margin-top: 30rpx;">
+                <text class="total-score-title">总积分</text>
+            </view>
+            <view style="text-align: center; margin-top: 30rpx;">
+                <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/icons/score_exc_icon.png' style="height:100rpx;width:100rpx; margin: 0rpx auto; vertical-align: middle;" />
+                <text class="total-score-num">50</text>
+            </view>
+        </view>
+    </view>
+
+    <!--积分详情-->
+    <view class="score-detail-con">
+        <view style="text-align: center; margin: 0 auto;">
+            <text style="color: #333; font-size: 36rpx;font-weight:bold;">积分详情</text>
+        </view>
+
+        <!--积分详情列表-->
+        <view class='score-detail-list'>
+            <view class="score-detail-item" wx:for="{{list}}" wx:key="id" wx:for-index="ind">
+                <view class="title">       
+                    {{item.transtype}}积分 
+                    <block wx:if="{{item.transtype == '支出'}}">
+                        <text class="reduce">{{item.score}}</text>
+                    </block>
+                    <block wx:else>
+                        <text class="add">{{item.score}}</text>
+                    </block>
+                </view>
+                <view class="date">{{item.createddate}}</view>
+                <view class="description">
+                    {{item.description}}
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+</view>

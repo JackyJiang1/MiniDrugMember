@@ -1,0 +1,36 @@
+<!--pages/drugmember/scoremall/scoremall.wxml-->
+<!-- 积分商城 -->
+<view class='mall-list'>
+    <!--等待框-->
+    <loading hidden="{{!loading}}">加载中...</loading>
+
+    <!--顶部标题栏-->
+    <view class='page-header'>
+        <text class='page-title'>积分商城</text>
+        <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/liwu.png' style="height:150rpx;width:150rpx;position: absolute; top:50rpx;right:50rpx;" />
+    </view>
+
+    <!--商品列表-->
+    <view class="goodslist">
+        <view class='goodsbox' wx:for="{{list}}" wx:key="id" wx:for-index="ind">
+            <view class="item"  onclick="viewGoodsDetail('33e40ecb-136c-4451-b5ff-63fba4480b80');">
+                <image class='poster' src="{{item.image}}" />
+            </view>
+            <view>
+                <text class='title'>{{item.name}}</text>
+                <!-- <text class='sub-title'>{{item.title}}</text> -->
+            </view>
+            <view>
+                <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/icons/score_exc_icon.png' style="height:40rpx;width:40rpx; margin-left: 20rpx; vertical-align: middle;" />
+                <text class="score">{{item.score}}积分</text>
+            </view>
+            <view style="text-align: center;">
+                <!--兑换按钮-->
+                <span id='span{{item.id}}' class='exchange' onclick='ExchangeGoods(this, "{{item.id}}", 0, "{{item.score}}");'>兑 换</span>
+                <!-- <button class="btnexchange">兑换</button> -->
+            </view>
+        </view>
+    </view>
+
+    <view style="width: 100%; height: 30rpx;"></view>
+</view>

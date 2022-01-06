@@ -1,0 +1,93 @@
+/* pages/drugmember/myscore/myscore.wxss */
+page{
+    background-color: #F0F4F7;
+}
+.myscorehead{
+    position: relative;
+}
+.myscorehead .title{
+    position: absolute;
+    top:90rpx;
+    left:10%;
+    font-size: 80rpx;
+    font-weight: bold;
+    color:#FFF;
+}
+.myscorehead .title1{
+    position: absolute;
+    top:160rpx;
+    left:15%;
+    font-size: 80rpx;
+    font-weight: bold;
+    color:#FFF;
+}
+
+.total-score-con{
+    position: relative;
+    height: 200rpx;
+}
+.total-score{
+    height: 226rpx;
+    /* border: 1px solid #008842; */
+    background-color: #FFF;
+    border: 1px solid #F2F2F2;
+    border-radius: 30rpx;
+    position: absolute;
+    top: -90rpx;
+    left: 4%;
+    z-index: 100;
+    width: 92%;
+  }
+  .total-score-title{
+      color: #848484;
+      font-size: 35rpx;
+      margin: 20rpx auto;
+  }
+  .total-score-num{
+      color: #4F4F4F;
+    font-size: 60rpx;
+    font-weight: bold;
+    margin: 0rpx auto;
+    vertical-align: middle;
+}
+
+.score-detail-con{
+}
+
+.score-detail-list{
+    padding-bottom: 50rpx;
+}
+.score-detail-item{
+    margin: 30rpx auto 0;
+    width: 90%;
+    background-color: #FFF;
+    border-radius: 20rpx;
+    padding: 30rpx 0;
+}
+.score-detail-item .title{
+    color: #3E3E3E; 
+    font-size: 34rpx; 
+    margin: 15rpx 0 0 40rpx;
+}
+.score-detail-item .add{
+    color: #108016; 
+    font-weight: bold;
+    float:right; 
+    margin-right:40rpx;
+}
+.score-detail-item .reduce{
+    color: red; 
+    font-weight: bold;
+    float:right; 
+    margin-right:40rpx;
+}
+.score-detail-item .date{
+    color: #949494; 
+    font-size: 30rpx; 
+    margin: 15rpx 0 0 40rpx; 
+}
+.score-detail-item .description{
+    color: #545454; 
+    font-size: 28rpx; 
+    margin: 15rpx 0 0 40rpx; 
+}

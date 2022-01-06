@@ -1,0 +1,112 @@
+<!--pages/drugmember/index/index.wxml-->
+<view>
+    <view id='banner'>
+    <swiper class="swiper" indicator-dots="{{true}}" indicator-color="#ffffff" autoplay="true" circular="true">
+      <block wx:for="{{banner}}" wx:key="banner">
+        <swiper-item>
+          <image src='{{item}}'mode="aspectFill" style="width:100%;height:100%;" />
+        </swiper-item> 
+      </block>
+    </swiper>
+    </view>
+    <view class="weui-search-bar">
+        <view>
+            <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/icons/msg_icon.png' style="height:25px;width:25px; margin-right: 20rpx;" />
+        </view>
+        <view class="weui-search-bar__form">
+        <!-- 搜索框 -->
+            <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                <input type="text" class="weui-search-bar__input" placeholder="药品、疾病、症状"/>
+            </view>
+        </view>
+        <!-- 搜索按钮,调用搜索查询方法 -->
+        <view class="weui-search-bar__cancel-btn" bindtap='a'>搜 索</view>
+    </view>
+    <view class='list-tab'>
+        <ul class="ul-icons">
+            <li data-index='0' bindtap='GoToSpeak'>
+                <div class="icon_bg1">
+                    <image src="cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/icons/yuyin_icon.png" style="height:80rpx;width:80rpx;" ></image >
+                    <!-- <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/icons/yuyin_icon.png' style="height:80rpx;width:80rpx;" /> -->
+                </div>
+            </li>
+            <li data-index='1' bindtap='GoToQuestion'>
+                <div class="icon_bg2">
+                    <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/icons/camera_icon.png' style="height:80rpx;width:80rpx;" />
+                </div>
+            </li>
+            <li catchtap='switchSlider' data-index='2'>
+                <div class="icon_bg3">
+                    <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/icons/jiangpai_icon.png' style="height:80rpx;width:80rpx;" />
+                </div>
+            </li>
+            <li catchtap='switchSlider' data-index='3'>
+                <div class="icon_bg4">
+                    <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/icons/bofang_icon.png' style="height:80rpx;width:80rpx;" />
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-text">
+            <li>
+                开口说
+            </li>
+            <li bindtap='GoToQuestion'>
+                问卷调查
+            </li>
+            <li>
+                药挑战
+            </li>
+            <li>
+                我学我练
+            </li>
+        </ul>
+    </view>
+    <view class='yao-tab'>
+        <ul>
+            <li>
+                <div class="yaobg">
+                    <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/renwu_bg.png' style="height:186rpx;width:100%;" />
+                    <div style="position: absolute; top: 10px;left:10px;color:#292928;font-size:18px;font-weight: bold;">药任务</div>
+                    <div style="position: absolute; top: 35px;left:10px;font-size:14px;color:#EEE;">完成任务,领学分</div>
+                </div>
+            </li>
+            <li>
+                <div class="yaobg">
+                    <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/xuexi_bg.png' style="height:186rpx;width:100%;" />
+                    <div style="position: absolute; top: 10px;left:10px;color:#292928;font-size:18px;font-weight: bold;">药学习</div>
+                    <div style="position: absolute; top: 35px;left:10px; font-size:14px; color:#EEE;">好好学习,天天向上</div>
+                </div>
+            </li>
+        </ul>
+    </view>
+    <view class="zuixinzixun">
+        <div class="title">最新资讯</div>
+    </view>
+
+    <!-- 资讯列表 -->
+    <view class='info-list'>
+        <!--等待框-->
+        <loading hidden="{{!loading}}">加载中...</loading>
+        <!--顶部标题栏-->
+        <!-- <view class='page-header'>
+            <text class='page-title'>{{title}}</text>
+        </view> -->
+        <!--列表-->
+        <view class='page-body' wx:for="{{list}}" wx:key="id">
+            <block>
+                <navigator url='../item/item?id={{item.category}}'>
+                    <view class='item'>
+                        <image class='poster' src='{{item.image}}'></image>
+                        <view class='meta'>
+                            <text class='title'>{{item.title}}</text>
+                            <text class='sub-title'>{{item.title}}</text>
+                        </view>
+                    </view>
+                </navigator>
+            </block>
+        </view>
+
+    </view>
+</view>
+

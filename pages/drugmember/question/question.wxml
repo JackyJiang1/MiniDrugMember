@@ -1,0 +1,55 @@
+<!--pages/drugmember/question/question.wxml-->
+<!-- 问卷列表 -->
+<view class='question-list'>
+    <!--等待框-->
+    <loading hidden="{{!loading}}">加载中...</loading>
+
+    <!--顶部标题栏-->
+    <view class='page-header'>
+        <text class='page-title'>问卷调查</text>
+        <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/xiaopiao.png' style="height:150rpx;width:150rpx;position: absolute; top:50rpx;right:50rpx;" />
+    </view>
+
+    <!--问题列表-->
+    <view class='page-body' wx:for="{{list}}" wx:key="id" wx:for-index="ind">
+        <view class="ask-wrap">
+            <view class="ask-title">{{ind + 1}}、{{item.question}}</view>
+            <view class="ask-area">
+                <radio-group class="radio-group" name="group_{{item.id}}" bindchange='radioChange' id="{{item.id}}">
+                    <label class="radio" bindchange="radioChange">
+                        <radio value="{{item.option_a}}" />{{item.option_a}}
+                    </label>
+                    <label class="radio" bindchange="radioChange">
+                        <radio value="{{item.option_b}}" />{{item.option_b}}
+                    </label>
+                    <label class="radio" bindchange="radioChange">
+                        <radio value="{{item.option_c}}" />{{item.option_c}}
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+    </view>
+
+    <!--上传小票-->
+    <view class='content'>
+        <view class='img-box'>
+            <view class='img-list'>
+            <block wx:for="{{detailPics}}" wx:key="index">
+                <view class='img-item'>
+                <image src='{{item}}' bindlongpress="bindlongpressimg" data-id='{{index}}'></image>
+                </view>
+            </block>
+            <view class='chooseimg' bindtap='uploadDetailImage'>
+                <view class="weui-uploader__input-box"></view>
+            </view>
+            </view>
+            <view class='tips'>长按对应的图片即可删除</view>
+        </view>
+    </view>
+
+    <!--提交按钮-->
+    <button class="btnsubmit">提 交</button>
+
+    <view style="width: 100%; height: 30rpx;">  </view>
+</view>
+

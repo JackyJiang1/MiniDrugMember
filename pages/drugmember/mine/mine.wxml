@@ -1,0 +1,82 @@
+<!--pages/drugmember/mine/mine.wxml-->
+<view>
+    <!--头部区域-->
+    <view class="top">
+        <view class="center">
+            <view class="center_top">
+                <view class="center_img">
+                    <!-- <image src="../../static/info_img.jpg"></image> -->
+                    <view class="userinfo-avatar" bindtap="bindViewTap">
+                        <open-data type="userAvatarUrl"></open-data>
+                    </view>
+                </view>
+                <view class="center_info">
+                    <view class='meta'>
+                        <open-data class="user-nickname" type="userNickName"></open-data>
+                        <span class="user-title" style="background-color: #FFB754;">见习店员</span>
+                        <text class='sub-title'>见习门店</text>
+                    </view>
+                </view>
+            </view>
+            <!--小票积分统计-->
+            <view class='statistics'>
+                <ul class="ul-num">
+                    <li>
+                        0
+                    </li>
+                    <li>
+                        0
+                    </li>
+                    <li>
+                        0
+                    </li>
+                </ul>
+                <ul class="ul-text">
+                    <li>
+                        我的小票
+                    </li>
+                    <li>
+                        学习课程
+                    </li>
+                    <li>
+                        我的积分
+                    </li>
+                </ul>
+            </view>
+        </view>
+        <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/wave.gif' mode='scaleToFill' class='gif-wave'></image>
+    </view>
+
+    <!--菜单区域-->
+    <view class="usermenu">
+        <ul>
+            <li bindtap='GoToMemberInfo'>
+                <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/icons/my_card_icon.png' style="height:60rpx;width:60rpx;" />
+                我的名片
+                <text>▷</text>
+            </li>
+            <li bindtap='GoToMyScore'>
+                <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/icons/loc_icon.png' style="height:60rpx;width:60rpx;" />
+                积分明细
+                <text>▷</text>
+            </li>            
+            <li>
+                <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/icons/message_icon.png' style="height:60rpx;width:60rpx;" />
+                留言板
+                <text>▷</text>
+            </li>            
+            <li>
+                <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/icons/service_icon.png' style="height:60rpx;width:60rpx;" />
+                联系客服
+                <text>▷</text>
+            </li>            
+            <li>
+                <image src='cloud://dh-1-5g88u11u7620e908.6468-dh-1-5g88u11u7620e908-1309121922/image/images/icons/ver_icon.png' style="height:60rpx;width:60rpx;" />
+                当前版本
+                <text style="font-size: 30rpx;">1.0.0</text>
+            </li>
+        </ul>
+    </view>
+</view>
+
+
