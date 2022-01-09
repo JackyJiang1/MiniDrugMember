@@ -7,7 +7,10 @@
         "pages/drugmember/memberinfo/memberinfo",
         "pages/drugmember/myscore/myscore",
         "pages/drugmember/speak/speak",
-        "pages/drugmember/speakindex/speakindex"
+        "pages/drugmember/speakindex/speakindex",
+        "pages/drugmember/test/test",
+        "pages/drugmember/artical/artical",
+        "pages/drugmember/articalindex/articalindex"
     ],
     "tabBar": {
         "color": "#858585",

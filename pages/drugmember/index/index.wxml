@@ -93,7 +93,7 @@
             <text class='page-title'>{{title}}</text>
         </view> -->
         <!--列表-->
-        <view class='page-body' wx:for="{{list}}" wx:key="id">
+        <view class='page-body' wx:for="{{list}}" wx:key="id" bindtap='GoToArtical'>
             <block>
                 <navigator url='../item/item?id={{item.category}}'>
                     <view class='item'>

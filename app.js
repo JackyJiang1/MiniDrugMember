@@ -6,6 +6,9 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
+
+    this.globalData.apiBaseUrl = 'https://180.76.154.24/' // 这样全局apiBaseUrl的值就设置完成了
+
     // 登录
     wx.login({
       success: res => {
@@ -14,6 +17,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    apiBaseUrl: null
   }
 })

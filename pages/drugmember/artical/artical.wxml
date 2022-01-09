@@ -1,0 +1,21 @@
+<!--pages/drugmember/artical/artical.wxml-->
+<view class="page">
+    <!--页头，显示需要用户读的文字-->
+    <view class="artical-head">
+        <view class="title">
+            什么是儿童过敏
+        </view>
+        <view class="date">
+            <span>
+              2022-01-07
+            </span>
+        </view>
+
+    </view>
+    <view class="content">
+        <image src='../../../images/20220107105313.jpg' mode="widthFix" style='width:100%' />
+    </view>
+
+</view>
+
+
